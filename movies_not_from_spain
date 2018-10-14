@@ -1,0 +1,11 @@
+#! /usr/bin/awk
+BEGIN{
+  FS="|"
+  line=0
+};
+($8 ~ /Spanish/) && ($9 !~ /Spain/){
+  line+=1
+};
+END{
+  print line
+  };
